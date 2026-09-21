@@ -1,0 +1,213 @@
+.desktopSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  background: var(--bg-sidebar, rgba(10, 18, 35, 0.95));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-right: 1px solid var(--border-color, rgba(212, 168, 83, 0.15));
+  z-index: 40;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopSidebar {
+    display: block;
+  }
+}
+
+.mobileSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  background: var(--bg-sidebar, rgba(10, 18, 35, 0.95));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-right: 1px solid var(--border-color, rgba(212, 168, 83, 0.15));
+  z-index: 60;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 50;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--border-color, rgba(212, 168, 83, 0.15));
+  border-radius: 4px;
+}
+
+.header {
+  padding: 24px 20px;
+  position: relative;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.logoIcon {
+  font-size: 1.5rem;
+}
+
+.logoText {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary, #d4a853);
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #8b9dc3);
+  margin-left: 36px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary, #8b9dc3);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: var(--primary, #d4a853);
+  background: rgba(212, 168, 83, 0.1);
+}
+
+.separator {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color, rgba(212, 168, 83, 0.15)), transparent);
+  margin: 8px 20px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px;
+  flex: 1;
+  gap: 4px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: var(--text-secondary, #8b9dc3);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 0.95rem;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.navIcon {
+  transition: all 0.3s ease;
+}
+
+.navItem:hover {
+  background: rgba(212, 168, 83, 0.05);
+  color: var(--text-primary, #f0e6d3);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navItem:hover .navIcon {
+  color: var(--primary, #d4a853);
+}
+
+.active {
+  background: rgba(212, 168, 83, 0.08);
+  color: var(--primary, #d4a853);
+  border-left: 3px solid var(--primary, #d4a853);
+  box-shadow: inset 2px 0 10px rgba(212, 168, 83, 0.1);
+}
+
+.active .navIcon {
+  color: var(--primary, #d4a853);
+}
+
+.footer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--border-color, rgba(212, 168, 83, 0.15));
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary, #d4a853), #b0893a);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 0 15px rgba(212, 168, 83, 0.3);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  color: var(--text-primary, #f0e6d3);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.userRole {
+  color: var(--text-secondary, #8b9dc3);
+  font-size: 0.75rem;
+}

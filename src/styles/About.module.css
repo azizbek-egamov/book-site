@@ -1,0 +1,204 @@
+.aboutPage {
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero */
+.heroBanner {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(6, 15, 29, 0.8);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+}
+
+.heroContent h1 {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.heroContent p {
+  color: var(--primary-light);
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+/* Main Content */
+.mainContent {
+  padding: 6rem 0;
+  background-color: var(--bg-darker);
+}
+
+.historyMissionLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.contentBlock h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.dividerCenter {
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  margin: 0 auto 3rem auto;
+}
+
+.contentBlock p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.missionText {
+  font-style: italic;
+  font-size: 1.3rem !important;
+  color: var(--primary-light) !important;
+  border-left: 4px solid var(--primary);
+  padding-left: 1.5rem;
+}
+
+/* Info Grid */
+.infoSection {
+  padding: 6rem 0;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.infoCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: var(--transition-normal);
+}
+
+.infoCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.iconBox {
+  width: 70px;
+  height: 70px;
+  background: rgba(212, 168, 83, 0.1);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.iconBox svg {
+  width: 32px;
+  height: 32px;
+}
+
+.infoCard h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoCard p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Gallery */
+.gallerySection {
+  padding: 6rem 0;
+  background-color: var(--bg-darker);
+}
+
+.sectionHeader {
+  text-align: center;
+}
+
+.sectionHeader h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.galleryItem {
+  height: 300px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.galleryItem:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .historyMissionLayout { grid-template-columns: 1fr; gap: 3rem; }
+  .infoGrid { grid-template-columns: repeat(2, 1fr); }
+  .heroContent h1 { font-size: 3rem; }
+}
+
+@media (max-width: 600px) {
+  .infoGrid { grid-template-columns: 1fr; }
+  .galleryGrid { grid-template-columns: 1fr; }
+  .heroContent h1 { font-size: 2.5rem; }
+}

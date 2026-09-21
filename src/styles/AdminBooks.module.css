@@ -1,0 +1,293 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-secondary);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  background: rgba(15, 25, 50, 0.4);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: inherit;
+  outline: none;
+  transition: var(--transition-normal);
+}
+
+.searchInput:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(212, 168, 83, 0.2);
+}
+
+.select {
+  padding: 0.75rem 1rem;
+  background: rgba(15, 25, 50, 0.4);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: inherit;
+  outline: none;
+  min-width: 180px;
+}
+
+.select:focus {
+  border-color: var(--primary);
+}
+
+.tableCard {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.table th,
+.table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  transition: var(--transition-normal);
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.coverImage {
+  width: 40px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bold {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  color: #fff;
+}
+
+.editBtn {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.editBtn:hover {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.deleteBtn {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.deleteBtn:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+.emptyText {
+  text-align: center !important;
+  color: var(--text-secondary) !important;
+  padding: 3rem !important;
+}
+
+/* Modal Form Styles */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.required {
+  color: var(--error);
+}
+
+.formSelect {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: rgba(10, 22, 40, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: inherit;
+  outline: none;
+  transition: var(--transition-normal);
+}
+
+.formSelect:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(212, 168, 83, 0.2);
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: rgba(10, 22, 40, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  transition: var(--transition-normal);
+}
+
+.textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(212, 168, 83, 0.2);
+}
+
+.checkboxGroup {
+  grid-column: 1 / -1;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+.errorText {
+  color: var(--error);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bookCover {
+  width: 45px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
