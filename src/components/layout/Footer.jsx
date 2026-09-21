@@ -29,6 +29,7 @@ const Footer = () => {
               <li><Link to="/books">Kitoblar</Link></li>
               <li><Link to="/about">Biz haqimizda</Link></li>
               <li><Link to="/contact">Aloqa</Link></li>
+              <li><Link to="/admin">Admin Panel</Link></li>
             </ul>
           </div>
 

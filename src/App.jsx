@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import { AuthProvider } from './context/AuthContext';
 import { ToastProvider } from './context/ToastContext';
@@ -34,7 +34,8 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Route>
             
-            {/* Admin Login */}
+            {/* Admin Login & Redirect */}
+            <Route path="/admin" element={<Navigate to="/admin/dashboard" replace />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             
             {/* Admin Routes */}
@@ -48,6 +49,9 @@ function App() {
               <Route path="/admin/library" element={<AdminLibrary />} />
               <Route path="/admin/settings" element={<AdminSettings />} />
             </Route>
+
+            {/* Catch-all Fallback */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </ToastProvider>
       </AuthProvider>
