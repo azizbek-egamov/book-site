@@ -435,7 +435,7 @@
   position: relative;
   width: 100%;
   max-width: 500px;
-  height: 300px;
+  min-height: 300px;
   background: linear-gradient(135deg, #1a2a47 0%, #0d1b32 100%);
   border-radius: 20px;
   padding: 2rem;
@@ -443,6 +443,9 @@
   border: 1px solid rgba(212, 168, 83, 0.3);
   overflow: hidden;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cardBgDecor {
@@ -459,7 +462,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
   position: relative;
   z-index: 2;
 }
@@ -469,6 +471,7 @@
   font-size: 1.5rem;
   color: #fff;
   letter-spacing: 2px;
+  margin: 0;
 }
 
 .goldText {
@@ -480,7 +483,7 @@
   height: 40px;
   background: linear-gradient(135deg, #e8c878 0%, #b8860b 100%);
   border-radius: 6px;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
   position: relative;
   z-index: 2;
 }
@@ -499,7 +502,7 @@
   font-size: 1.8rem;
   color: #fff;
   letter-spacing: 4px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-family: monospace;
   position: relative;
   z-index: 2;
@@ -645,4 +648,12 @@
 @media (max-width: 480px) {
   .statsGrid { grid-template-columns: 1fr; }
   .categoriesGrid { grid-template-columns: 1fr; }
+  .visualCard { 
+    padding: 1.5rem; 
+    height: auto; 
+    min-height: 250px; 
+  }
+  .cardNumber { font-size: 1.3rem; letter-spacing: 2px; }
+  .cardTitle { font-size: 2rem; }
+  .heroTitle { font-size: 2rem; }
 }

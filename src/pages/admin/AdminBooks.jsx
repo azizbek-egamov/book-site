@@ -96,7 +96,7 @@ const AdminBooks = () => {
       </div>
 
       <div className={styles.filters}>
-        <div style={{ flex: 1, minWidth: '250px' }}>
+        <div style={{ flex: 1, minWidth: '200px' }}>
           <SearchBar value={searchQuery} onChange={setSearchQuery} placeholder="Kitob yoki avtor bo'yicha qidirish..." />
         </div>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>

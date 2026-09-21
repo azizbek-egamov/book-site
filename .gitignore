@@ -1,1 +1,4 @@
 node_modules
+*.local
+new/
+.DS_Store

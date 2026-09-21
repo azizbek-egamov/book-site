@@ -110,7 +110,7 @@ const AdminCustomers = () => {
       </div>
 
       <div className={styles.filters}>
-        <div style={{ flex: 1, minWidth: '250px' }}>
+        <div style={{ flex: 1, minWidth: '200px' }}>
           <SearchBar value={searchQuery} onChange={setSearchQuery} placeholder="Ism, telefon yoki karta raqami..." />
         </div>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
